@@ -61,5 +61,10 @@ obligation ledgers, verbatim manuscript registers, and the cleaned surface
 summary.
 
 It certifies the current paper surface as axiom-free at the manuscript-facing
-level. It does not claim a full end-to-end classical PDE proof of the periodic
-three-dimensional Navier--Stokes theorem in Lean.
+level.
+
+It does not claim a full end-to-end classical PDE proof of the periodic
+three-dimensional Navier--Stokes theorem in Lean. It does, however, package a
+structural route intended as a qualifying claim under the official Clay rules,
+which explicitly allow genuinely new mathematical methods rather than only
+classical PDE-native proof styles.
