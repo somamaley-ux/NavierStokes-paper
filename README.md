@@ -1,0 +1,48 @@
+# Navier--Stokes Paper
+
+Standalone Lean snapshot for the manuscript-facing Navier--Stokes theorem
+surface and its current paper bundle.
+
+## Contents
+
+- `MaleyLean/Papers/NavierStokes/`
+  standalone Lean dependency closure for the Navier--Stokes paper surface
+- `MaleyLean/Papers/Meta/PrimitiveToPeriodicLocalTheory.lean`
+  shared primitive-to-local-theory bridge required by the extracted surface
+- `Checks/Axiom/NavierStokesPaperSurfaceSummaryCleanAxiomCheck.lean`
+  dedicated axiom audit entry point
+- `papers/navier_stokes/main.tex`
+  canonical manuscript source
+- `papers/navier_stokes/main.pdf`
+  manuscript PDF supplied from the workspace
+- `reports/audits/navier_stokes_paper_surface_summary_clean_axiom_audit.txt`
+  human-readable audit note
+- `reports/status/navier_stokes_status.md`
+  human-readable status note
+
+## Build
+
+This project uses Lean `v4.28.0` via `lean-toolchain`.
+
+Build the extracted project with:
+
+```text
+lake build
+```
+
+Build just the dedicated axiom check with:
+
+```text
+lake env lean Checks\\Axiom\\NavierStokesPaperSurfaceSummaryCleanAxiomCheck.lean
+```
+
+## Scope
+
+This repo packages the current Navier--Stokes manuscript-facing theorem spine
+in standalone form: the primitive route, continuation and obstruction layers,
+obligation ledgers, verbatim manuscript registers, and the cleaned surface
+summary.
+
+It certifies the current paper surface as axiom-free at the manuscript-facing
+level. It does not claim a full end-to-end classical PDE proof of the periodic
+three-dimensional Navier--Stokes theorem in Lean.
