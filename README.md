@@ -20,6 +20,17 @@ surface and its current paper bundle.
 - `reports/status/navier_stokes_status.md`
   human-readable status note
 
+## Repository Layout
+
+- `MaleyLean/`
+  extracted Lean source closure needed to build the Navier--Stokes paper surface
+- `Checks/`
+  dedicated Lean entry points for axiom-audit verification
+- `papers/navier_stokes/`
+  manuscript source, PDF, appendices, readiness bundle, and build helpers
+- `reports/`
+  exported audit and status artifacts associated with this snapshot
+
 ## Build
 
 This project uses Lean `v4.28.0` via `lean-toolchain`.
@@ -35,6 +46,12 @@ Build just the dedicated axiom check with:
 ```text
 lake env lean Checks\\Axiom\\NavierStokesPaperSurfaceSummaryCleanAxiomCheck.lean
 ```
+
+## Verification
+
+The extracted project builds successfully as a standalone Lean repo, and the
+dedicated summary-surface axiom check reports that
+`NavierStokesPaperSurfaceSummaryCleanStatement` depends on no axioms.
 
 ## Scope
 
